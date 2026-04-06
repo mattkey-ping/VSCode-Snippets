@@ -9,7 +9,7 @@
     "Put Session Property": {
         "prefix": "aic-action-putSessionProperty",
         "body": [
-            "putSessionProperty('${1:key}', ${2:value});"
+            "action.putSessionProperty('${1:key}', ${2:value});"
         ],
         "description": "Store a property in the session"
     },
@@ -51,7 +51,7 @@
     "With Identified Agent": {
         "prefix": "aic-action-withIdentifiedAgent",
         "body": [
-            "withIdentifiedAgent()"
+            "action.withIdentifiedAgent()"
         ],
         "description": "Identify agent"
     },
