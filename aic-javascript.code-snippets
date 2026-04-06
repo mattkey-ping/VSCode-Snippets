@@ -1,0 +1,199 @@
+{
+  "Template-SDN-small": {
+    "prefix": "Template-SDN-small",
+    "body": [
+      "// Version: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "",
+      "var outcome = \"Success\";",
+      "\t$0",
+      "action.goTo(outcome);"
+    ]
+  },
+  "Template-SDN-medium": {
+    "prefix": "Template-SDN-medium",
+    "body": [
+      "/**",
+      "* Name: ${1:scriptName}.js",
+      "* Version: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "*/",
+      "",
+      "var NodeOutcome = {",
+      "SUCCESS: \"Success\",",
+      "ERROR: \"Error\"",
+      "};",
+      "\t$0",
+      "",
+      "(function () {",
+      "var outcome = \"\";",
+      "",
+      "try {",
+      "",
+      "outcome = NodeOutcome.SUCCESS;",
+      "}",
+      "catch (e) {",
+      "logger.error(\"final catch: \" + e);",
+      "outcome = NodeOutcome.ERROR;",
+      "}",
+      "action.goTo(outcome);",
+      "}());"
+    ]
+  },
+  "Template-SDN-large": {
+    "prefix": "Template-SDN-large",
+    "body": [
+      "/**",
+      " * Name: ${1:scriptName}.js",
+      " * Version: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      " * Author: ${2:Author}",
+      " *",
+      " * Disclaimer:",
+      " * The sample code described herein is provided on an \"as is\" basis, without warranty of any kind, to the fullest extent permitted by law. The Author(s) nor Ping Identity does not warrant or guarantee the individual success developers may have in implementing the sample code on their development platforms or in production configurations.",
+      " * The Author(s) and Ping Identity does not warrant, guarantee or make any representations regarding the use, results of use, accuracy, timeliness or completeness of any data or information relating to the sample code. The Author(s) and Ping Identity disclaims all warranties, expressed or implied, and in particular, disclaims all warranties of merchantability, and warranties related to the code, or any service or software related thereto.",
+      " * The Author(s) and Ping Identity shall not be liable for any direct, indirect or consequential damages or costs of any type arising out of any action taken by you or others related to the sample code.",
+      " * This sample code is not covered by any Ping Identity Service Level Agreements.",
+      " * ",
+      " * Description:",
+      " *   ",
+      " *",
+      " * Required Prerequisites:",
+      " *   ",
+      " *",
+      " * Optional Prerequisites:",
+      " *   ",
+      " *",
+      " * Usage:",
+      " *   ",
+      " *",
+      " * Required Inputs:",
+      " *     ",
+      " *",
+      " * Optional Inputs:",
+      " *   ",
+      " *",
+      " * Outputs:",
+      " *   Shared State:",
+      " *     ",
+      " *     ",
+      " * Outcome:",
+      " *   Success ",
+      " *   OR Error",
+      " */",
+      "",
+      "////GLOBALS",
+      "var NodeOutcome = {",
+      "SUCCESS: \"Success\",",
+      "ERROR: \"Error\"",
+      "};",
+      "\t$0",
+      "",
+      "////HELPERS",
+      "",
+      "////MAIN",
+      "(function () {",
+      "var outcome = \"\";",
+      "",
+      "try {",
+      "",
+      "outcome = NodeOutcome.SUCCESS;",
+      "}",
+      "catch (e) {",
+      "logger.error(\"final catch: \" + e);",
+      "outcome = NodeOutcome.ERROR;",
+      "}",
+      "action.goTo(outcome);",
+      "}());"
+    ]
+  },
+  "Function with 1 input": {
+    "prefix": "func1",
+    "body": [
+      "/**",
+      " * ${2:description}",
+      " * @param {string} ${3:arg1}",
+      " * @returns {*}",
+      " */",
+      "function ${1:name}(${3:arg1}) {",
+      "\tlog.info.function(\"${1:name}(${3:arg1})\");",
+      "\tlog.debug(\"${3:arg1}: \" + ${3:arg1});",
+      "\t",
+      "\t$0",
+      "\t",
+      "\tlog.info.return(\"result:\" + result);",
+      "return result;",
+      "}"
+    ]
+  },
+  "Function with 2 inputs": {
+    "prefix": "func2",
+    "body": [
+      "/**",
+      " * ${2:description}",
+      " * @param {string} ${3:arg1}",
+      " * @param {string} ${4:arg2}",
+      " * @returns {object}",
+      " */",
+      "function ${1:name}(${3:arg1}, ${4:arg2}) {",
+      "\tlog.info.function(\"${1:name}(${3:arg1}, ${4:arg2})\");",
+      "\tlog.debug(\"${3:arg1}: \" + ${3:arg1});",
+      "\tlog.debug(\"${4:arg2}: \" + ${4:arg2});",
+      "\t",
+      "\t$0",
+      "\t",
+      "\tlog.info.return(\"result:\" + result);",
+      "return result;",
+      "}"
+    ]
+  },
+  "error": {
+    "prefix": "error",
+    "body": [
+      "logger.error(\"${1:enter error}\"${0:});"
+    ]
+  },
+  "console": {
+    "prefix": "console",
+    "body": [
+      "log.console(\"${1:enter console log}\"${0:});"
+    ]
+  },
+  "info": {
+    "prefix": "info",
+    "body": [
+      "log.info(\"${1:enter info}\"${0:});"
+    ]
+  },
+  "debug": {
+    "prefix": "debug",
+    "body": [
+      "log.debug(\"${1:enter function name}\", \"${0:}\");"
+    ]
+  },
+  "comment variable": {
+    "prefix": "jj",
+    "body": [
+      "+ \"${1:enter comment}\"${0:});"
+    ]
+  },
+  "JS Comment Block": {
+    "prefix": "jsliteral",
+    "body": [
+      "\/*js*\/`\\"
+    ]
+  },
+  "outcome": {
+    "prefix": "outcome",
+    "body": [
+      "var NodeOutcome = {",
+      "SUCCESS: \"Success\",",
+      "ERROR: \"Error\"",
+      "};"
+    ]
+  },
+  "action": {
+    "prefix": "action",
+    "body": [
+      "outcome = NodeOutcome.SUCCESS;",
+      "action.goTo(outcome);"
+    ]
+  }
+}

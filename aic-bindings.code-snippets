@@ -1,0 +1,807 @@
+{
+    "Go To": {
+        "prefix": "aic-action-goTo",
+        "body": [
+            "goTo(${1:destination});"
+        ],
+        "description": "Navigate to a specific destination"
+    },
+    "Put Session Property": {
+        "prefix": "aic-action-putSessionProperty",
+        "body": [
+            "putSessionProperty('${1:key}', ${2:value});"
+        ],
+        "description": "Store a property in the session"
+    },
+    "Remove Session Property": {
+        "prefix": "aic-action-removeSessionProperty",
+        "body": [
+            "removeSessionProperty('${1:key}');"
+        ],
+        "description": "Remove a property from the session"
+    },
+    "Suspend Full": {
+        "prefix": "aic-action-suspend",
+        "body": [
+            "suspend(${1:callbackTextFormat}, ${2:additionalLogic}, ${3:maximumSuspendDuration});"
+        ],
+        "description": "Suspend with all parameters"
+    },
+    "With Description": {
+        "prefix": "aic-action-withDescription",
+        "body": [
+            "withDescription('${1:description}')"
+        ],
+        "description": "Add a description"
+    },
+    "With Error Message": {
+        "prefix": "aic-action-withErrorMessage",
+        "body": [
+            "withErrorMessage('${1:message}')"
+        ],
+        "description": "Add an error message"
+    },
+    "With Header": {
+        "prefix": "aic-action-withHeader",
+        "body": [
+            "withHeader('${1:headerText}')"
+        ],
+        "description": "Add a header"
+    },
+    "With Identified Agent": {
+        "prefix": "aic-action-withIdentifiedAgent",
+        "body": [
+            "withIdentifiedAgent()"
+        ],
+        "description": "Identify agent"
+    },
+    "With Identified User": {
+        "prefix": "aic-action-withIdentifiedUser",
+        "body": [
+            "withIdentifiedUser()"
+        ],
+        "description": "Identify user"
+    },
+    "With Lockout Message": {
+        "prefix": "aic-action-withLockoutMessage",
+        "body": [
+            "withLockoutMessage('${1:message}')"
+        ],
+        "description": "Add lockout message"
+    },
+    "With Max Idle": {
+        "prefix": "aic-action-withMaxIdleTime",
+        "body": [
+            "withMaxIdleTime(${1:duration})"
+        ],
+        "description": "Set max idle time"
+    },
+    "With Max Session": {
+        "prefix": "aic-action-withMaxSessionTime",
+        "body": [
+            "withMaxSessionTime(${1:duration})"
+        ],
+        "description": "Set max session time"
+    },
+    "With Stage": {
+        "prefix": "aic-action-withStage",
+        "body": [
+            "withStage('${1:stageName}')"
+        ],
+        "description": "Specify journey stage"
+    },
+    "Exists": {
+        "prefix": "aic-cacheManager-exists",
+        "body": [
+            "cacheManager.exists('${1:key}')"
+        ],
+        "description": "Check if cache key exists"
+    },
+    "Named": {
+        "prefix": "aic-cacheManager-named",
+        "body": [
+            "cacheManager.named('${1:cacheName}')"
+        ],
+        "description": "Get a named cache instance"
+    },
+    "Get Boolean Input": {
+        "prefix": "aic-callbacks-getBooleanAttributeInputCallbacks",
+        "body": [
+            "callbacks.getBooleanAttributeInputCallbacks()"
+        ],
+        "description": "Get Boolean Input Callbacks"
+    },
+    "Get Choice": {
+        "prefix": "aic-callbacks-getChoiceCallbacks",
+        "body": [
+            "callbacks.getChoiceCallbacks()"
+        ],
+        "description": "Get Choice Callbacks"
+    },
+    "Get Confirmation": {
+        "prefix": "aic-callbacks-getConfirmationCallbacks",
+        "body": [
+            "callbacks.getConfirmationCallbacks()"
+        ],
+        "description": "Get Confirmation Callbacks"
+    },
+    "Get Consent Mapping": {
+        "prefix": "aic-callbacks-getConsentMappingCallbacks",
+        "body": [
+            "callbacks.getConsentMappingCallbacks()"
+        ],
+        "description": "Get Consent Mapping Callbacks"
+    },
+    "Get Device Profile": {
+        "prefix": "aic-callbacks-getDeviceProfileCallbacks",
+        "body": [
+            "callbacks.getDeviceProfileCallbacks()"
+        ],
+        "description": "Get Device Profile Callbacks"
+    },
+    "Get Hidden Value": {
+        "prefix": "aic-callbacks-getHiddenValueCallbacks",
+        "body": [
+            "callbacks.getHiddenValueCallbacks()"
+        ],
+        "description": "Get Hidden Value Callbacks"
+    },
+    "Get Http": {
+        "prefix": "aic-callbacks-getHttpCallbacks",
+        "body": [
+            "callbacks.getHttpCallbacks()"
+        ],
+        "description": "Get Http Callbacks"
+    },
+    "Get IdP": {
+        "prefix": "aic-callbacks-getIdpCallbacks",
+        "body": [
+            "callbacks.getIdpCallbacks()"
+        ],
+        "description": "Get IdP Callbacks"
+    },
+    "Get KBA Create": {
+        "prefix": "aic-callbacks-getKbaCreateCallbacks",
+        "body": [
+            "callbacks.getKbaCreateCallbacks()"
+        ],
+        "description": "Get KBA Create Callbacks"
+    },
+    "Get Language": {
+        "prefix": "aic-callbacks-getLanguageCallbacks",
+        "body": [
+            "callbacks.getLanguageCallbacks()"
+        ],
+        "description": "Get Language Callbacks"
+    },
+    "Get Name Callback": {
+        "prefix": "aic-callbacks-getNameCallbacks",
+        "body": [
+            "callbacks.getNameCallbacks()"
+        ],
+        "description": "Get Name Callbacks"
+    },
+    "Get Number Input": {
+        "prefix": "aic-callbacks-getNumberAttributeInputCallbacks",
+        "body": [
+            "callbacks.getNumberAttributeInputCallbacks()"
+        ],
+        "description": "Get Number Input Callbacks"
+    },
+    "Get Password": {
+        "prefix": "aic-callbacks-getPasswordCallbacks",
+        "body": [
+            "callbacks.getPasswordCallbacks()"
+        ],
+        "description": "Get Password Callbacks"
+    },
+    "Get Select IdP": {
+        "prefix": "aic-callbacks-getSelectIdPCallbacks",
+        "body": [
+            "callbacks.getSelectIdPCallbacks()"
+        ],
+        "description": "Get Select IdP Callbacks"
+    },
+    "Get String Input": {
+        "prefix": "aic-callbacks-getStringAttributeInputCallbacks",
+        "body": [
+            "callbacks.getStringAttributeInputCallbacks()"
+        ],
+        "description": "Get String Input Callbacks"
+    },
+    "Get T&C": {
+        "prefix": "aic-callbacks-getTermsAndConditionsCallbacks",
+        "body": [
+            "callbacks.getTermsAndConditionsCallbacks()"
+        ],
+        "description": "Get Terms and Conditions Callbacks"
+    },
+    "Get Text Input": {
+        "prefix": "aic-callbacks-getTextInputCallbacks",
+        "body": [
+            "callbacks.getTextInputCallbacks()"
+        ],
+        "description": "Get Text Input Callbacks"
+    },
+    "Get Validated Password": {
+        "prefix": "aic-callbacks-getValidatedPasswordCallbacks",
+        "body": [
+            "callbacks.getValidatedPasswordCallbacks()"
+        ],
+        "description": "Get Validated Password Callbacks"
+    },
+    "Get Validated Username": {
+        "prefix": "aic-callbacks-getValidatedUsernameCallbacks",
+        "body": [
+            "callbacks.getValidatedUsernameCallbacks()"
+        ],
+        "description": "Get Validated Username Callbacks"
+    },
+    "Get X509": {
+        "prefix": "aic-callbacks-getX509CertificateCallbacks",
+        "body": [
+            "callbacks.getX509CertificateCallbacks()"
+        ],
+        "description": "Get X509 Callbacks"
+    },
+    "Is Empty": {
+        "prefix": "aic-callbacks-isEmpty",
+        "body": [
+            "callbacks.isEmpty()"
+        ],
+        "description": "Check if callbacks list is empty"
+    },
+    "Boolean Input": {
+        "prefix": "aic-callbacksBuilder-booleanAttributeInputCallback",
+        "body": [
+            "callbacksBuilder.booleanAttributeInputCallback('${1:name}', '${2:prompt}', ${3:value}, ${4:required})"
+        ],
+        "description": "Build Boolean Input Callback"
+    },
+    "Choice": {
+        "prefix": "aic-callbacksBuilder-choiceCallback",
+        "body": [
+            "callbacksBuilder.choiceCallback('${1:prompt}', [${2:choices}], ${3:defaultChoice}, ${4:false})"
+        ],
+        "description": "Build Choice Callback"
+    },
+    "Confirmation": {
+        "prefix": "aic-callbacksBuilder-confirmationCallback",
+        "body": [
+            "callbacksBuilder.confirmationCallback(${1:messageType}, ${2:options}, ${3:defaultOption})"
+        ],
+        "description": "Build Confirmation Callback"
+    },
+    "Consent Mapping": {
+        "prefix": "aic-callbacksBuilder-consentMappingCallback",
+        "body": [
+            "callbacksBuilder.consentMappingCallback(${1:config}, '${2:message}', ${3:isRequired})"
+        ],
+        "description": "Build Consent Mapping Callback"
+    },
+    "Device Profile": {
+        "prefix": "aic-callbacksBuilder-deviceProfileCallback",
+        "body": [
+            "callbacksBuilder.deviceProfileCallback()"
+        ],
+        "description": "Build Device Profile Callback"
+    },
+    "Hidden Value": {
+        "prefix": "aic-callbacksBuilder-hiddenValueCallback",
+        "body": [
+            "callbacksBuilder.hiddenValueCallback()"
+        ],
+        "description": "Build Hidden Value Callback"
+    },
+    "Http": {
+        "prefix": "aic-callbacksBuilder-httpCallback",
+        "body": [
+            "callbacksBuilder.httpCallback('${1:authHeader}', '${2:negoHeader}', '${3:errorCode}')"
+        ],
+        "description": "Build Http Callback"
+    },
+    "IdP": {
+        "prefix": "aic-callbacksBuilder-idPCallback",
+        "body": [
+            "callbacksBuilder.idPCallback(${1:provider}, ${2:clientId}, ${3:redirectUri}, ${4:scope}, ${5:nonce})"
+        ],
+        "description": "Build IdP Callback"
+    },
+    "KBA Create": {
+        "prefix": "aic-callbacksBuilder-kbaCreateCallback",
+        "body": [
+            "callbacksBuilder.kbaCreateCallback()"
+        ],
+        "description": "Build KBA Create Callback"
+    },
+    "Language": {
+        "prefix": "aic-callbacksBuilder-languageCallback",
+        "body": [
+            "callbacksBuilder.languageCallback()"
+        ],
+        "description": "Build Language Callback"
+    },
+    "Metadata": {
+        "prefix": "aic-callbacksBuilder-metadataCallback",
+        "body": [
+            "callbacksBuilder.metadataCallback()"
+        ],
+        "description": "Build Metadata Callback"
+    },
+    "Name Callback": {
+        "prefix": "aic-callbacksBuilder-nameCallback",
+        "body": [
+            "callbacksBuilder.nameCallback('${1:prompt}', '${2:defaultName}')"
+        ],
+        "description": "Build Name Callback"
+    },
+    "Number Input": {
+        "prefix": "aic-callbacksBuilder-numberAttributeInputCallback",
+        "body": [
+            "callbacksBuilder.numberAttributeInputCallback('${1:name}', '${2:prompt}', ${3:value}, ${4:required})"
+        ],
+        "description": "Build Number Input Callback"
+    },
+    "Password": {
+        "prefix": "aic-callbacksBuilder-passwordCallback",
+        "body": [
+            "callbacksBuilder.passwordCallback()"
+        ],
+        "description": "Build Password Callback"
+    },
+    "Polling Wait": {
+        "prefix": "aic-callbacksBuilder-pollingWaitCallback",
+        "body": [
+            "callbacksBuilder.pollingWaitCallback()"
+        ],
+        "description": "Build Polling Wait Callback"
+    },
+    "Redirect": {
+        "prefix": "aic-callbacksBuilder-redirectCallback",
+        "body": [
+            "callbacksBuilder.redirectCallback('${1:url}', ${2:data}, '${3:method}')"
+        ],
+        "description": "Build Redirect Callback"
+    },
+    "Script Text Output": {
+        "prefix": "aic-callbacksBuilder-scriptTextOutputCallback",
+        "body": [
+            "callbacksBuilder.scriptTextOutputCallback()"
+        ],
+        "description": "Build Script Text Output Callback"
+    },
+    "Select IdP": {
+        "prefix": "aic-callbacksBuilder-selectIdPCallback",
+        "body": [
+            "callbacksBuilder.selectIdPCallback()"
+        ],
+        "description": "Build Select IdP Callback"
+    },
+    "String Input": {
+        "prefix": "aic-callbacksBuilder-stringAttributeInputCallback",
+        "body": [
+            "callbacksBuilder.stringAttributeInputCallback('${1:name}', '${2:prompt}', '${3:value}', ${4:required})"
+        ],
+        "description": "Build String Input Callback"
+    },
+    "Suspended Text": {
+        "prefix": "aic-callbacksBuilder-suspendedTextOutputCallback",
+        "body": [
+            "callbacksBuilder.suspendedTextOutputCallback()"
+        ],
+        "description": "Build Suspended Text Output Callback"
+    },
+    "T&C": {
+        "prefix": "aic-callbacksBuilder-termsAndConditionsCallback",
+        "body": [
+            "callbacksBuilder.termsAndConditionsCallback()"
+        ],
+        "description": "Build Terms and Conditions Callback"
+    },
+    "Text Input": {
+        "prefix": "aic-callbacksBuilder-textInputCallback",
+        "body": [
+            "callbacksBuilder.textInputCallback('${1:prompt}', '${2:defaultText}')"
+        ],
+        "description": "Build Text Input Callback"
+    },
+    "Text Output": {
+        "prefix": "aic-callbacksBuilder-textOutputCallback",
+        "body": [
+            "callbacksBuilder.textOutputCallback()"
+        ],
+        "description": "Build Text Output Callback"
+    },
+    "Validated Password": {
+        "prefix": "aic-callbacksBuilder-validatedPasswordCallback",
+        "body": [
+            "callbacksBuilder.validatedPasswordCallback('${1:prompt}', ${2:echoOn}, ${3:policies}, ${4:validateOnly})"
+        ],
+        "description": "Build Validated Password Callback"
+    },
+    "Validated Username": {
+        "prefix": "aic-callbacksBuilder-validatedUsernameCallback",
+        "body": [
+            "callbacksBuilder.validatedUsernameCallback('${1:prompt}', ${2:policies}, ${3:validateOnly})"
+        ],
+        "description": "Build Validated Username Callback"
+    },
+    "X509": {
+        "prefix": "aic-callbacksBuilder-x509CertificateCallback",
+        "body": [
+            "callbacksBuilder.x509CertificateCallback('${1:prompt}')"
+        ],
+        "description": "Build X509 Callback"
+    },
+    "HTTP: Send": {
+        "prefix": "aic-httpClient-send",
+        "body": [
+            "httpClient.send('${1:uri}', ${2:requestOptions})"
+        ],
+        "description": "Send an HTTP request"
+    },
+    "IdRepo: Get Identity": {
+        "prefix": "aic-idRepository-getIdentity",
+        "body": [
+            "idRepository.getIdentity()"
+        ],
+        "description": "Retrieve current identity"
+    },
+    "Identity Resource": {
+        "prefix": "aic-journey-identityResource",
+        "body": [
+            "journey.identityResource()"
+        ],
+        "description": "Get identity resource"
+    },
+    "Inner Journey": {
+        "prefix": "aic-journey-innerJourney",
+        "body": [
+            "journey.innerJourney()"
+        ],
+        "description": "Get inner journey"
+    },
+    "Must Run": {
+        "prefix": "aic-journey-mustRun",
+        "body": [
+            "journey.mustRun()"
+        ],
+        "description": "Check if must run"
+    },
+    "Name": {
+        "prefix": "aic-journey-name",
+        "body": [
+            "journey.name()"
+        ],
+        "description": "Get journey name"
+    },
+    "Generate": {
+        "prefix": "aic-jwtAssertion-generateJwt",
+        "body": [
+            "jwtAssertion.generateJwt()"
+        ],
+        "description": "Generate a JWT"
+    },
+    "Validate": {
+        "prefix": "aic-jwtValidator-validateJwtClaims",
+        "body": [
+            "jwtValidator.validateJwtClaims()"
+        ],
+        "description": "Validate JWT claims"
+    },
+    "Debug": {
+        "prefix": "aic-logger-debug",
+        "body": [
+            "logger.debug('${1:message}')"
+        ],
+        "description": "Log debug"
+    },
+    "Error": {
+        "prefix": "aic-logger-error",
+        "body": [
+            "logger.error('${1:message}')"
+        ],
+        "description": "Log error"
+    },
+    "Info": {
+        "prefix": "aic-logger-info",
+        "body": [
+            "logger.info('${1:message}')"
+        ],
+        "description": "Log info"
+    },
+    "Trace": {
+        "prefix": "aic-logger-trace",
+        "body": [
+            "logger.trace('${1:message}')"
+        ],
+        "description": "Log trace"
+    },
+    "Warn": {
+        "prefix": "aic-logger-warn",
+        "body": [
+            "logger.warn('${1:message}')"
+        ],
+        "description": "Log warning"
+    },
+    "Get Name": {
+        "prefix": "aic-logger-getName",
+        "body": [
+            "logger.getName()"
+        ],
+        "description": "Get logger name"
+    },
+    "Is Debug Enabled": {
+        "prefix": "aic-logger-isDebugEnabled",
+        "body": [
+            "logger.isDebugEnabled()"
+        ],
+        "description": "Check debug level"
+    },
+    "Get": {
+        "prefix": "aic-nodeState-get",
+        "body": [
+            "nodeState.get('${1:key}')"
+        ],
+        "description": "Get state value"
+    },
+    "Get Object": {
+        "prefix": "aic-nodeState-getObject",
+        "body": [
+            "nodeState.getObject('${1:key}')"
+        ],
+        "description": "Get state object"
+    },
+    "Is Defined": {
+        "prefix": "aic-nodeState-isDefined",
+        "body": [
+            "nodeState.isDefined('${1:key}')"
+        ],
+        "description": "Check if key defined"
+    },
+    "Keys": {
+        "prefix": "aic-nodeState-keys",
+        "body": [
+            "nodeState.keys()"
+        ],
+        "description": "Get all state keys"
+    },
+    "Merge Shared": {
+        "prefix": "aic-nodeState-mergeShared",
+        "body": [
+            "nodeState.mergeShared(${1:map})"
+        ],
+        "description": "Merge into shared state"
+    },
+    "Merge Transient": {
+        "prefix": "aic-nodeState-mergeTransient",
+        "body": [
+            "nodeState.mergeTransient(${1:map})"
+        ],
+        "description": "Merge into transient state"
+    },
+    "Put Shared": {
+        "prefix": "aic-nodeState-putShared",
+        "body": [
+            "nodeState.putShared('${1:key}', ${2:value})"
+        ],
+        "description": "Put into shared state"
+    },
+    "Put Transient": {
+        "prefix": "aic-nodeState-putTransient",
+        "body": [
+            "nodeState.putTransient('${1:key}', ${2:value})"
+        ],
+        "description": "Put into transient state"
+    },
+    "Remove": {
+        "prefix": "aic-nodeState-remove",
+        "body": [
+            "nodeState.remove('${1:key}')"
+        ],
+        "description": "Remove state key"
+    },
+    "Get OAuth App Id": {
+        "prefix": "aic-oauthApplication-getApplicationId",
+        "body": [
+            "oauthApplication.getApplicationId()"
+        ],
+        "description": "Get OAuth App ID"
+    },
+    "Get Client Prop": {
+        "prefix": "aic-oauthApplication-getClientProperties",
+        "body": [
+            "oauthApplication.getClientProperties()"
+        ],
+        "description": "Get Client Properties"
+    },
+    "Get Request Prop": {
+        "prefix": "aic-oauthApplication-getRequestProperties",
+        "body": [
+            "oauthApplication.getRequestProperties()"
+        ],
+        "description": "Get Request Properties"
+    },
+    "Action": {
+        "prefix": "aic-openidm-action",
+        "body": [
+            "openidm.action('${1:resource}', '${2:actionName}', ${3:content})"
+        ],
+        "description": "IDM Action"
+    },
+    "Create": {
+        "prefix": "aic-openidm-create",
+        "body": [
+            "openidm.create('${1:resourceName}', ${2:newResourceId}, ${3:content})"
+        ],
+        "description": "IDM Create"
+    },
+    "Delete": {
+        "prefix": "aic-openidm-delete",
+        "body": [
+            "openidm.delete('${1:resourceName}', '${2:rev}')"
+        ],
+        "description": "IDM Delete"
+    },
+    "Patch": {
+        "prefix": "aic-openidm-patch",
+        "body": [
+            "openidm.patch('${1:resourceName}', '${2:rev}', ${3:patch})"
+        ],
+        "description": "IDM Patch"
+    },
+    "Query": {
+        "prefix": "aic-openidm-query",
+        "body": [
+            "openidm.query('${1:resourceName}', ${2:params})"
+        ],
+        "description": "IDM Query"
+    },
+    "Read": {
+        "prefix": "aic-openidm-read",
+        "body": [
+            "openidm.read('${1:resourceName}')"
+        ],
+        "description": "IDM Read"
+    },
+    "Update": {
+        "prefix": "aic-openidm-update",
+        "body": [
+            "openidm.update('${1:id}', '${2:rev}', ${3:value})"
+        ],
+        "description": "IDM Update"
+    },
+    "Evaluate": {
+        "prefix": "aic-policy-evaluate",
+        "body": [
+            "policy.evaluate()"
+        ],
+        "description": "Evaluate policy"
+    },
+    "Get App Id": {
+        "prefix": "aic-samlApplication-getApplicationId",
+        "body": [
+            "samlApplication.getApplicationId()"
+        ],
+        "description": "Get SAML App ID"
+    },
+    "Get Assertion": {
+        "prefix": "aic-samlApplication-getAssertion",
+        "body": [
+            "samlApplication.getAssertion()"
+        ],
+        "description": "Get SAML Assertion"
+    },
+    "Get AuthnRequest": {
+        "prefix": "aic-samlApplication-getAuthnRequest",
+        "body": [
+            "samlApplication.getAuthnRequest()"
+        ],
+        "description": "Get AuthnRequest"
+    },
+    "Get Decryption": {
+        "prefix": "aic-secrets-getDecryptionKey",
+        "body": [
+            "secrets.getDecryptionKey('${1:label}')"
+        ],
+        "description": "Get decryption key"
+    },
+    "Get Encryption": {
+        "prefix": "aic-secrets-getEncryptionKey",
+        "body": [
+            "secrets.getEncryptionKey('${1:label}')"
+        ],
+        "description": "Get encryption key"
+    },
+    "Get Generic": {
+        "prefix": "aic-secrets-getGenericSecret",
+        "body": [
+            "secrets.getGenericSecret('${1:label}')"
+        ],
+        "description": "Get generic secret"
+    },
+    "Get Signing": {
+        "prefix": "aic-secrets-getSigningKey",
+        "body": [
+            "secrets.getSigningKey('${1:label}')"
+        ],
+        "description": "Get signing key"
+    },
+    "Get Verification": {
+        "prefix": "aic-secrets-getVerificationKey",
+        "body": [
+            "secrets.getVerificationKey('${1:label}')"
+        ],
+        "description": "Get verification key"
+    },
+    "B64 atob": {
+        "prefix": "aic-utils-base64-atob",
+        "body": [
+            "utils.base64.atob(${1:string})"
+        ],
+        "description": "Base64 atob"
+    },
+    "B64 btoa": {
+        "prefix": "aic-utils-base64-btoa",
+        "body": [
+            "utils.base64.btoa(${1:string})"
+        ],
+        "description": "Base64 btoa"
+    },
+    "B64 Decode": {
+        "prefix": "aic-utils-base64-decode",
+        "body": [
+            "utils.base64.decode(${1:string})"
+        ],
+        "description": "Base64 decode"
+    },
+    "B64 Encode": {
+        "prefix": "aic-utils-base64-encode",
+        "body": [
+            "utils.base64.encode(${1:toEncode})"
+        ],
+        "description": "Base64 encode"
+    },
+    "Crypto Random Values": {
+        "prefix": "aic-utils-crypto-getRandomValues",
+        "body": [
+            "utils.crypto.getRandomValues(${1:typedArray})"
+        ],
+        "description": "Get random values"
+    },
+    "Crypto UUID": {
+        "prefix": "aic-utils-crypto-randomUUID",
+        "body": [
+            "utils.crypto.randomUUID()"
+        ],
+        "description": "Generate UUID"
+    },
+    "Crypto Subtle Digest": {
+        "prefix": "aic-utils-crypto-subtle-digest",
+        "body": [
+            "utils.crypto.subtle.digest('${1:SHA-256}', ${2:data})"
+        ],
+        "description": "Crypto digest"
+    },
+    "Crypto Subtle Sign": {
+        "prefix": "aic-utils-crypto-subtle-sign",
+        "body": [
+            "utils.crypto.subtle.sign(${1:algorithm}, ${2:key}, ${3:data})"
+        ],
+        "description": "Crypto sign"
+    },
+    "Bytes To String": {
+        "prefix": "aic-utils-types-bytesToString",
+        "body": [
+            "utils.types.bytesToString(${1:bytes})"
+        ],
+        "description": "Convert bytes to string"
+    },
+    "String To Bytes": {
+        "prefix": "aic-utils-types-stringToBytes",
+        "body": [
+            "utils.types.stringToBytes(${1:string})"
+        ],
+        "description": "Convert string to bytes"
+    }
+}

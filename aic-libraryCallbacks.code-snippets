@@ -1,0 +1,135 @@
+{
+  "Callback Inputs": {
+    "prefix": "callback-inputs",
+    "body": [
+      "var libraryCallbacks = require('library_callbacks');",
+      "var INPUTS = [",
+      "\t$0",
+      "\t];"
+    ]
+  },
+  "Callback Handler": {
+    "prefix": "callback-handler",
+    "body": [
+      "if (callbacks.isEmpty()) {",
+      "    libraryCallbacks.renderInteractiveCallbackOptions(INPUTS, callbacksBuilder);",
+      "    libraryCallbacks.formatInteractiveCallbackOptions(INPUTS, callbacksBuilder);",
+      "} else {",
+      "    var responses = libraryCallbacks.gatherInteractiveCallbackResponses(INPUTS, callbacks);",
+      "    nodeState.putShared(callbackInputs, responses);",
+      "}"
+    ]
+  },
+  "Custom Name Callback": {
+    "prefix": "callback-customNameCallback",
+    "body": [
+      "{",
+      "  type: \"NameCallback\",",
+      "  label: \"Custom Name Callback\",",
+      "  value: \"${1:An Example Default Value}\"",
+      "}"
+    ]
+  },
+  "Custom Name Callback No Value": {
+    "prefix": "callback-customNameCallbackNoValue",
+    "body": [
+      "{",
+      "  type: \"NameCallback\",",
+      "  label: \"Custom Name Callback without Default Value\"",
+      "}"
+    ]
+  },
+  "Custom Name Callback With Styling": {
+    "prefix": "callback-customNameCallbackWithStyling",
+    "body": [
+      "{",
+      "  type: \"NameCallback\",",
+      "  label: \"Custom Name Callback With Styling\",",
+      "  tooltip: \"<p>This is an example tooltip.</p><p>It can be <i>styled</i> with HTML!</p><p>Tooltips and descriptions work on all input types except for:</p><ul><li>BooleanAttributeInputCallbacks</li><li>ChoiceCallbacks</li><li>ConfirmationCallbacks</li></ul>\",",
+      "  description: \"This is an example description. It can only be a string.\",",
+      "  required: true",
+      "}"
+    ]
+  },
+  "Custom Name Callback Multi Value": {
+    "prefix": "callback-customNameCallbackMultiValue",
+    "body": [
+      "{",
+      "  type: \"NameCallback\",",
+      "  label: \"Custom Name Callback With Multi Value (Space Separated)\",",
+      "  delimiter: \" \",",
+      "  value: \"${1:default, multi, values}\"",
+      "}"
+    ]
+  },
+  "Custom Password Callback": {
+    "prefix": "callback-customPasswordCallback",
+    "body": [
+      "{",
+      "  type: \"PasswordCallback\",",
+      "  label: \"Custom Password Callback\"",
+      "}"
+    ]
+  },
+  "Custom Hidden Value Callback": {
+    "prefix": "callback-customHiddenValueCallback",
+    "body": [
+      "{",
+      "  type: \"HiddenValueCallback\",",
+      "  value: \"${1:The Hidden Value}\"",
+      "}"
+    ]
+  },
+  "Custom Number Attribute Input Callback": {
+    "prefix": "callback-customNumberAttributeInputCallback",
+    "body": [
+      "{",
+      "  type: \"NumberAttributeInputCallback\",",
+      "  label: \"Custom Number Attribute Input Callback\",",
+      "  value: ${1:10},",
+      "  required: false",
+      "}"
+    ]
+  },
+  "Custom Boolean Attribute Input Callback": {
+    "prefix": "callback-customBooleanAttributeInputCallback",
+    "body": [
+      "{",
+      "  type: \"BooleanAttributeInputCallback\",",
+      "  label: \"Custom Boolean Attribute Input Callback\",",
+      "  value: ${1:true},",
+      "  required: false",
+      "}"
+    ]
+  },
+  "Custom Choice Callback": {
+    "prefix": "callback-customChoiceCallback",
+    "body": [
+      "{",
+      "  type: \"ChoiceCallback\",",
+      "  label: \"Custom Choice Callback\",",
+      "  choices: [",
+      "    { \"label\": \"1\", \"value\": \"First Option Selected\" },",
+      "    { \"label\": \"2\", \"value\": 2 },",
+      "    { \"label\": \"3\", \"value\": { \"description\": \"values can be any type, including objects!\", \"value\": \"Third Option Selected\" } },",
+      "    { \"label\": \"4\", \"value\": \"Fourth Option Selected\" },",
+      "    { \"label\": \"${1:Label5}\" , \"value\": \"${1:Option5}\" }",
+      "  ]",
+      "}"
+    ]
+  },
+  "Custom Confirmation Callback": {
+    "prefix": "callback-customConfirmationCallback",
+    "body": [
+      "{",
+      "  type: \"ConfirmationCallback\",",
+      "  label: \"Custom Confirmation Callback\",",
+      "  choices: [",
+      "    { \"label\": \"Yes\", \"value\": \"Yes Selected\" },",
+      "    { \"label\": \"No\", \"value\": \"No Selected\" },",
+      "    { \"label\": \"Maybe\", \"value\": { \"description\": \"values can be any type, including objects!\", \"value\": \"Maybe Selected\" } }",
+      "  ]",
+      "}"
+    ]
+  }
+}
