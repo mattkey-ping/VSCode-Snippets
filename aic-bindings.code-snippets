@@ -2,7 +2,7 @@
     "Go To": {
         "prefix": "aic-action-goTo",
         "body": [
-            "goTo(${1:destination});"
+            "action.goTo(${1:destination});"
         ],
         "description": "Navigate to a specific destination"
     },
@@ -16,35 +16,35 @@
     "Remove Session Property": {
         "prefix": "aic-action-removeSessionProperty",
         "body": [
-            "removeSessionProperty('${1:key}');"
+            "action.removeSessionProperty('${1:key}');"
         ],
         "description": "Remove a property from the session"
     },
     "Suspend Full": {
         "prefix": "aic-action-suspend",
         "body": [
-            "suspend(${1:callbackTextFormat}, ${2:additionalLogic}, ${3:maximumSuspendDuration});"
+            "action.suspend(${1:callbackTextFormat}, ${2:additionalLogic}, ${3:maximumSuspendDuration});"
         ],
         "description": "Suspend with all parameters"
     },
     "With Description": {
         "prefix": "aic-action-withDescription",
         "body": [
-            "withDescription('${1:description}')"
+            "action.withDescription('${1:description}')"
         ],
         "description": "Add a description"
     },
     "With Error Message": {
         "prefix": "aic-action-withErrorMessage",
         "body": [
-            "withErrorMessage('${1:message}')"
+            "action.withErrorMessage('${1:message}')"
         ],
         "description": "Add an error message"
     },
     "With Header": {
         "prefix": "aic-action-withHeader",
         "body": [
-            "withHeader('${1:headerText}')"
+            "action.withHeader('${1:headerText}')"
         ],
         "description": "Add a header"
     },
@@ -58,35 +58,35 @@
     "With Identified User": {
         "prefix": "aic-action-withIdentifiedUser",
         "body": [
-            "withIdentifiedUser()"
+            "action.withIdentifiedUser()"
         ],
         "description": "Identify user"
     },
     "With Lockout Message": {
         "prefix": "aic-action-withLockoutMessage",
         "body": [
-            "withLockoutMessage('${1:message}')"
+            "action.withLockoutMessage('${1:message}')"
         ],
         "description": "Add lockout message"
     },
     "With Max Idle": {
         "prefix": "aic-action-withMaxIdleTime",
         "body": [
-            "withMaxIdleTime(${1:duration})"
+            "action.withMaxIdleTime(${1:duration})"
         ],
         "description": "Set max idle time"
     },
     "With Max Session": {
         "prefix": "aic-action-withMaxSessionTime",
         "body": [
-            "withMaxSessionTime(${1:duration})"
+            "action.withMaxSessionTime(${1:duration})"
         ],
         "description": "Set max session time"
     },
     "With Stage": {
         "prefix": "aic-action-withStage",
         "body": [
-            "withStage('${1:stageName}')"
+            "action.withStage('${1:stageName}')"
         ],
         "description": "Specify journey stage"
     },
